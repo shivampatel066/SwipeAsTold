@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,98 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwipeAsTold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="uHx-C3-XjD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SimonSays" translatesAutoresizingMaskIntoConstraints="NO" id="c14-yI-R6u">
+                                <rect key="frame" x="16" y="20" width="343" height="238"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFD-F4-r8F">
+                                <rect key="frame" x="16" y="266" width="167.5" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="xlw-tt-TQb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6s-Dc-7T5">
+                                <rect key="frame" x="191.5" y="266" width="167.5" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="fOT-DX-cwb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58B-CM-PPD">
+                                <rect key="frame" x="16" y="583" width="343" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="zqY-50-Rvm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJ0-PJ-Gne"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simon Says Swipe Right" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a84-Dl-ceG">
+                                <rect key="frame" x="16" y="337" width="343" height="238"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.2518461044520548" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uHx-C3-XjD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1cf-cW-Mfb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="58B-CM-PPD" secondAttribute="bottom" constant="20" id="3fb-FB-1r0"/>
+                            <constraint firstItem="58B-CM-PPD" firstAttribute="top" secondItem="a84-Dl-ceG" secondAttribute="bottom" constant="8" id="6HR-T6-uPw"/>
+                            <constraint firstItem="a84-Dl-ceG" firstAttribute="top" secondItem="ZFD-F4-r8F" secondAttribute="bottom" constant="8" id="8fL-Bo-Prv"/>
+                            <constraint firstItem="a84-Dl-ceG" firstAttribute="top" secondItem="F6s-Dc-7T5" secondAttribute="bottom" constant="8" id="91l-cu-Ieu"/>
+                            <constraint firstAttribute="bottom" secondItem="uHx-C3-XjD" secondAttribute="bottom" id="9tR-b6-qrz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="58B-CM-PPD" secondAttribute="trailing" constant="16" id="AoQ-1d-tuM"/>
+                            <constraint firstItem="uHx-C3-XjD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BOD-c0-beK"/>
+                            <constraint firstItem="F6s-Dc-7T5" firstAttribute="top" secondItem="c14-yI-R6u" secondAttribute="bottom" constant="8" id="Eby-yJ-cbg"/>
+                            <constraint firstItem="ZFD-F4-r8F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="S4I-Ir-86D"/>
+                            <constraint firstItem="a84-Dl-ceG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UNG-ve-0FB"/>
+                            <constraint firstItem="58B-CM-PPD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xg9-CH-Vc7"/>
+                            <constraint firstItem="ZFD-F4-r8F" firstAttribute="top" secondItem="c14-yI-R6u" secondAttribute="bottom" constant="8" id="Y9t-hY-rxa"/>
+                            <constraint firstItem="a84-Dl-ceG" firstAttribute="height" secondItem="c14-yI-R6u" secondAttribute="height" id="ZYJ-GP-zsd"/>
+                            <constraint firstItem="uHx-C3-XjD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bGd-Oz-csY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c14-yI-R6u" secondAttribute="trailing" constant="16" id="g1m-Z5-3b7"/>
+                            <constraint firstItem="F6s-Dc-7T5" firstAttribute="leading" secondItem="ZFD-F4-r8F" secondAttribute="trailing" constant="8" id="ggx-k2-vXN"/>
+                            <constraint firstItem="F6s-Dc-7T5" firstAttribute="width" secondItem="ZFD-F4-r8F" secondAttribute="width" id="har-ca-rJC"/>
+                            <constraint firstItem="c14-yI-R6u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="m7M-gp-dw6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a84-Dl-ceG" secondAttribute="trailing" constant="16" id="o8o-Cm-D0p"/>
+                            <constraint firstItem="c14-yI-R6u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oEw-Xz-HeM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F6s-Dc-7T5" secondAttribute="trailing" constant="16" id="r6s-vL-570"/>
+                            <constraint firstItem="a84-Dl-ceG" firstAttribute="width" secondItem="c14-yI-R6u" secondAttribute="width" id="tGn-dl-Ien"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="F6s-Dc-7T5" id="ri4-K5-KaT"/>
+                        <outlet property="simonLabel" destination="a84-Dl-ceG" id="bYT-ae-eiH"/>
+                        <outlet property="startGameButton" destination="58B-CM-PPD" id="Kkc-Sl-MjY"/>
+                        <outlet property="timeLabel" destination="ZFD-F4-r8F" id="dgu-w5-7R7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="126.38680659670166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+        <image name="SimonSays" width="1000" height="707"/>
+    </resources>
 </document>
